@@ -6,12 +6,12 @@
   border-bottom:1px solid #ccc;
   width:100%;
 }
-  ::placeholder{
+/*  ::placeholder{
     text-align: center;
     color: deeppink;
     text-transform: uppercase;
   }
-
+*/
   .blink{
         animation:fade 500ms infinite;
         -webkit-animation:fade 500ms infinite;
@@ -63,3 +63,34 @@
     from{ left:-100px; opacity:0 }
     to{ left:0; opacity:1 }
   }
+.login{
+  color: #fffffe;
+  padding:10px 40px;
+  margin: 50px 0px;
+}
+.login a:hover{
+  text-decoration: none;
+  color: rgb(255, 0, 125);
+}
+.brand{
+  text-align: center;
+}
+.footer{
+  color: #fff;
+}
+.jumbotron{
+  color: #000;
+}
+.brand{
+  width: 210px;
+  height: 80px;
+  padding-bottom: 18px;
+  margin: 0px;
+}
+.login{
+  margin-top:10px;
+}
+.navbar{
+  padding-top: 50px;
+  height: 90px;
+}

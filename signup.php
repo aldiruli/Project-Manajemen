@@ -7,11 +7,11 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel='shortcut icon' type='image/x-icon' href='./img/ico-x.png' />
   </head>
-	<body style="background:lavenderblush;"><tt><center>
+	<body style="background:#e3f2fd;"><tt><center>
 	   <div class="container">
       <div class="row">
          <div class="col-sm-12" style="padding:10px">
-           <a href="../Project-Manajemen" style="color:black;text-decoration:none"><h3><span style="color:deeppink">Project Manajemen</span> MARKETPLACE</h3><br /></a>
+           <a href="index.php" style="color:black;text-decoration:none"><h3><span style="color:deeppink">Project Manajemen</span> MARKETPLACE</h3><br /></a>
            <h5>create your account</h5>
          </div>
        </div>

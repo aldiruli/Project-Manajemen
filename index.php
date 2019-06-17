@@ -9,26 +9,36 @@
     <link rel='shortcut icon' type='image/x-icon' href='./img/ico-x.png' />
   </head>
   <body><center><tt>
+    <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-bottom:0px;">
+    <ul class="navbar-nav mr-auto">
+
+        <img class="brand" alt="Brand" src="img/index.jpeg">
+      <li>
+        <form class="form-inline my-2 my-lg-0" style="padding:12px 100px">
+          <input class="form-control mr-sm-1" type="search" placeholder="Cari produk atau Toko" aria-label="Search" style="width:650px;">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </li>
+      <li class="login">
+        <a href="./login.php">
+          login
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br />
     <div class="container">
-      <div class="row">
-        <div class="col-sm-6"><br />
-          <h3><kbd>WELCOME TO<br />Project Manajemen MARKETPLACE</kbd></h3>&nbsp;
-        </div>
-        <div class="col-sm-4">
-        </div>
-        <div class="col-sm-2">
-          <br />
-          <a href="./login.php" class="text-danger">
-            <i class="fa fa-sign-in fa-3x" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-      <br />
       <div class="row">
         <?php include './config/select-product.php'; ?>
       </div>
       <br />
-      <div class="row">
+      <div class="row" style="margin:0px;">
         <div class="col-sm-12">
           <h6>arminTeam&trade; &copy; 2019</h6>
         </div>
