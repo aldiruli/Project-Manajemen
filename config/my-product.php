@@ -10,9 +10,14 @@
           header("Location:../login.php");
         }
     }
-  $seller = $_SESSION['username'];
+    $selectstore = mysqli_query($connection, "SELECT user_shopname FROM user WHERE (`user_username` LIKE '%".$_SESSION['username']."%')");
+    if ($selectstore) {
+      while ($rowy = mysqli_fetch_assoc($selectstore)) {
+        $seller = $rowy['user_shopname'];
+      }
+    }
 
-  $myproduct = mysqli_query($connection, "SELECT * FROM product WHERE `product_seller` = '$seller'");
+  $myproduct = mysqli_query($connection, "SELECT * FROM product WHERE `product_seller` = '$seller' ORDER BY 1 DESC");
 
   if ($myproduct) {
     // output data of each row
