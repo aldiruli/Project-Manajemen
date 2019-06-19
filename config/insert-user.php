@@ -14,15 +14,23 @@
       $sel = mysqli_query($connection,"SELECT user_username FROM user WHERE user_username='$uname'");
       $selc = mysqli_num_rows($sel);
 
-      if ($selc != TRUE) {
-        $instusr = mysqli_query($connection, "INSERT INTO user (user_name,user_username,user_pwd,user_phone,user_shopname,user_bank,user_accountbank,user_uptime) VALUES ('$name','$uname','$pwd','$phone','$shopname','$bank','$accbank',now())");
-        if ($instusr) {
-          echo $uname." has been registered.".'<br />';
-          header("refresh:2 , ../login.php");
+      $selstore = mysqli_query($connection,"SELECT user_shopname FROM user WHERE user_username='$shopname'");
+      $usestore = mysqli_num_rows($selstore);
+
+      if ($selc != TRUE ) {
+        if ($usestore == TRUE) {
+          $instusr = mysqli_query($connection, "INSERT INTO user (user_name,user_username,user_pwd,user_phone,user_shopname,user_bank,user_accountbank,user_uptime) VALUES ('$name','$uname','$pwd','$phone','$shopname','$bank','$accbank',now())");
+          if ($instusr) {
+            echo $uname." has been registered.".'<br />';
+            header("refresh:2 , ../login.php");
+          }else {
+            echo "bad logic";
+          }
+          mysqli_close($connection);
         }else {
-          echo "bad logic";
+          echo $shopname." has been used, please another name store.";
+          header("refresh:2 , ../signup.php");
         }
-        mysqli_close($connection);
       }else {
         echo '<br />'."Username: ".$uname." is already exists.".'<br />';
         header("refresh:2 , ../signup.php");

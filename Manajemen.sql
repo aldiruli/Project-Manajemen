@@ -65,6 +65,7 @@ CREATE TABLE `request` (
   `request_buyercountry` varchar(255) DEFAULT NULL,
   `request_buyerpostalcode` varchar(255) DEFAULT NULL,
   `request_time` datetime DEFAULT NULL,
+  `product_seller` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`request_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -117,4 +118,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-19 20:49:43
+-- Dump completed on 2019-06-19 22:38:51

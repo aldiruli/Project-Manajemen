@@ -35,7 +35,7 @@
         $recipient_country    = strtoupper($_POST['recipient_country']);
         $recipient_postalcode = $_POST['recipient_postalcode'];
 
-        $insorder = mysqli_query($connection, "INSERT INTO request (request_productname,request_quantity,request_totalprice,request_buyername,request_buyerphone,request_buyeraddress,request_buyersubdis,request_buyercity,request_buyerprovince,request_buyercountry,request_buyerpostalcode,request_time) VALUES ('$product_name','$product_quantity','$product_price','$recipient_name','$recipient_phone','$recipient_address','$recipient_subdis','$recipient_city','$recipient_province','$recipient_country','$recipient_postalcode',now())");
+        $insorder = mysqli_query($connection, "INSERT INTO request (request_productname,request_quantity,request_totalprice,request_buyername,request_buyerphone,request_buyeraddress,request_buyersubdis,request_buyercity,request_buyerprovince,request_buyercountry,request_buyerpostalcode,request_time,product_seller) VALUES ('$product_name','$product_quantity','$product_price','$recipient_name','$recipient_phone','$recipient_address','$recipient_subdis','$recipient_city','$recipient_province','$recipient_country','$recipient_postalcode',now(),'$product_shop')");
 
         if ($insorder) {
           $quantitynow = mysqli_query($connection, "SELECT product_quantity FROM product WHERE id_product = '$product_id'");
