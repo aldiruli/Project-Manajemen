@@ -18,7 +18,7 @@
       $usestore = mysqli_num_rows($selstore);
 
       if ($selc != TRUE ) {
-        if ($usestore == TRUE) {
+        if ($usestore != TRUE) {
           $instusr = mysqli_query($connection, "INSERT INTO user (user_name,user_username,user_pwd,user_phone,user_shopname,user_bank,user_accountbank,user_uptime) VALUES ('$name','$uname','$pwd','$phone','$shopname','$bank','$accbank',now())");
           if ($instusr) {
             echo $uname." has been registered.".'<br />';
