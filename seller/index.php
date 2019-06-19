@@ -14,9 +14,9 @@
 ?>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
     <title>Seller Page</title>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel='shortcut icon' type='image/x-icon' href='../img/ico-x.png' />
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
@@ -53,7 +53,7 @@
             </li>
           </ul>
         </div>
-      </nav></center>
+      </nav>
       <div class="tab-content">
         <div id="Home" class="container tab-pane active"><br>
           <h3>Welcome to Project Manajemen MARKETPLACE Data Center</h3>
