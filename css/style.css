@@ -81,16 +81,7 @@
 .jumbotron{
   color: #000;
 }
-.brand{
-  width: 210px;
-  height: 80px;
-  padding-bottom: 18px;
-  margin: 0px;
-}
-.login{
-  margin-top:10px;
-}
-.navbar{
-  padding-top: 50px;
-  height: 90px;
+img .brand{
+  width: 180px;
+  height: 70px;
 }

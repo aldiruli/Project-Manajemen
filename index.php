@@ -3,33 +3,28 @@
   <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
 	  <title>Project Manajemen MARKETPLACE</title>
-    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel='shortcut icon' type='image/x-icon' href='./img/ico-x.png' />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel='shortcut icon' type='image/x-icon' href='img/ico-x.png' />
   </head>
   <body><center><tt>
-    <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #e3f2fd;">
+      <a href="#">
+        <img src="img/index.jpeg" width="200" height="80" alt="">
+      </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-bottom:0px;">
-    <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <img class="brand" alt="Brand" src="img/index.jpeg">
-      <li>
-        <form class="form-inline my-2 my-lg-0" style="padding:12px 100px">
-          <input class="form-control mr-sm-1" type="search" placeholder="Cari produk atau Toko" aria-label="Search" style="width:650px;">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </li>
-      <li class="login">
-        <a href="./login.php">
-          login
-        </a>
-      </li>
-    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width:800px;">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <a href="login.php" style="padding-left:100px;">login</a>
+    </form>
   </div>
 </nav>
 <br />
