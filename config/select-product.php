@@ -74,7 +74,7 @@
                       if ($selectuser) {
                         $rowb = mysqli_fetch_assoc($selectuser)
                       ?>
-                      Ask Us: <a href="https://api.whatsapp.com/send?phone=<?php echo $rowb['user_phone']?>" class="fa fa-whatsapp fa-2x" target="_blank" style="text-align:center"></a>
+                      Ask Us: <a href="https://wa.me/<?php echo $rowb['user_phone']?>?text=Hi%20<?php echo $row['product_seller']?>,%20<?php echo $row['product_name']?>%20still%20available?" class="fa fa-whatsapp fa-2x" target="_blank" style="text-align:center"></a>
                       <?php
                       }else {
                         echo "string";
@@ -96,7 +96,7 @@
         <?php
           }
         }else {
-          echo "string";
+          echo '&laquo'."NO PRODUCT".'&raquo';
         }
         mysqli_close($connection);
          ?>

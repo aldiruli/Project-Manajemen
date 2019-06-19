@@ -20,14 +20,14 @@
             <h3>-- CART
               <?php
                 while ($rowz = mysqli_fetch_assoc($selstore)) {
-                  echo $rowz['user_shopname'];
+                  echo $rowz['user_shopname']." --";
               ?>
               <form class="" action="./checkout.php" method="POST">
                   <input type="text" name="product-shopname" value="<?php echo $rowz['user_shopname']; ?>" readonly hidden />
               <?php
                 }
               ?>
-              --</h3>
+            </h3>
           <?php
             $p=mysqli_query($connection,"SELECT * FROM product where id_product ='$buy'");
             while ($row=mysqli_fetch_assoc($p)) {
@@ -65,7 +65,7 @@
                 <td>Quantity</td>
                 <td>:</td>
                 <td>
-                  <input type="number" name="product-quantity" placeholder="1" required />
+                  <input type="number" name="product-quantity" placeholder="1" min="1" max="<?php echo $row['product_quantity']; ?>" required />
                 </td>
               </tr>
               <tr>
