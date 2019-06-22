@@ -4,10 +4,10 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
 	  <title>Project Manajemen MARKETPLACE</title>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/jquery.min.js"></script>
-    <link rel='shortcut icon' type='image/x-icon' href='img/ico-x.png' />
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./js/jquery.min.js"></script>
+    <link rel='shortcut icon' type='image/x-icon' href='./img/ico-x.png' />
   </head>
   <body><center><tt>
     <nav class="navbar navbar-expand-lg navbar-light "style="background-color: #e3f2fd;">
@@ -20,8 +20,8 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width:800px;">
+    <form class="form-inline my-2 my-lg-0" action="index.php" method="GET">
+      <input class="form-control mr-sm-2" type="search" name="search" placeholder="Store or Product Search" aria-label="Search" style="width:800px;">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       <a href="login.php" style="padding-left:100px;">login</a>
     </form>
@@ -30,7 +30,13 @@
 <br />
     <div class="container">
       <div class="row">
-        <?php include './config/select-product.php'; ?>
+        <?php
+          if (isset($_GET['search'])) {
+            include './config/search.php';
+          }else {
+            include './config/select-product.php';
+          }
+        ?>
       </div>
       <br />
       <div class="row" style="margin:0px;">
