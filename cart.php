@@ -15,19 +15,19 @@
           <?php
           require_once './config/connection.php';
           $buy=$_GET['buy'];
-          $selstore = mysqli_query($connection, "SELECT user_shopname FROM user WHERE (`user_id` LIKE '%".$buy."%')");
+          $selstore = mysqli_query($connection, "SELECT product_seller FROM product WHERE id_product = $buy");
           ?>
-            <h3>-- CART
+            <h4>-- CART
               <?php
                 while ($rowz = mysqli_fetch_assoc($selstore)) {
-                  echo $rowz['user_shopname']." --";
+                  echo $rowz['product_seller']." --";
               ?>
               <form class="" action="./checkout.php" method="POST">
-                  <input type="text" name="product-shopname" value="<?php echo $rowz['user_shopname']; ?>" readonly hidden />
+                  <input type="text" name="product-shopname" value="<?php echo $rowz['product_seller']; ?>" readonly hidden />
               <?php
                 }
               ?>
-            </h3>
+            </h4>
           <?php
             $p=mysqli_query($connection,"SELECT * FROM product where id_product ='$buy'");
             while ($row=mysqli_fetch_assoc($p)) {
