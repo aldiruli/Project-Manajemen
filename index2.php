@@ -32,7 +32,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width:800px;">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
