@@ -31,10 +31,7 @@
       <div class="row">
         <?php
         require './config/connection.php';
-        function rupiah($angka){
-          $hasil_rupiah = "Rp. " . number_format($angka,0,',','.');
-          return $hasil_rupiah;
-        }
+
         $selectproduct = mysqli_query($connection, "SELECT * FROM product ORDER BY 1 DESC");
         if ($selectproduct) {
           while ($row = mysqli_fetch_assoc($selectproduct)) {
@@ -78,7 +75,7 @@
                   </div>
                   <div class="modal-footer">
                     <a href="cart.php?buy=<?php echo $row['id_product']?>" class="fa fa-cart-plus fa-2x"></a>&nbsp;
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                   </div>
                 </div>
 
