@@ -56,6 +56,18 @@
           </td>
         </tr>
         <tr>
+          <td>Category</td>
+          <td>:</td>
+          <td>
+            <select class="btn-info" name="product-category" required />
+              <option value="" disabled selected>Select One</option>
+              <option value="MEN">MEN</option>
+              <option value="WOMAN">WOMAN</option>
+              <option value="UNCATEGORIZED">UNCATEGORIZED</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
           <td>Seller</td>
           <td>:</td>
           <td>

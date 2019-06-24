@@ -31,6 +31,7 @@
     echo '<td>'."PRICE".'</td>';
     echo '<td>'."DESCRIPTION".'</td>';
     echo '<td>'."IMAGE".'</td>';
+    echo '<td>'."CATEGORY".'</td>';
     echo '<td>'."UPTIME".'</td>';
     echo '</tr>';
     echo '<thead>';
@@ -43,6 +44,7 @@
       echo '<td>'.$row["product_price"].'</td>';
       echo '<td>'.$row["product_description"].'</td>';
       echo '<td>'."<img src='../img/product/".$row['product_image']."'style='width:50%' >".'</td>';
+      echo '<td>'.$row["product_category"].'</td>';
       echo '<td>'.$row["product_uptime"].'</td>';
       echo '</tr>';
       echo '</tbody>';
