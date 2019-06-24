@@ -29,6 +29,7 @@ CREATE TABLE `product` (
   `product_price` int(16) DEFAULT NULL,
   `product_description` text,
   `product_image` longblob,
+  `product_category` varchar(255) DEFAULT NULL,
   `product_seller` varchar(255) DEFAULT NULL,
   `product_uptime` datetime DEFAULT NULL,
   PRIMARY KEY (`id_product`)

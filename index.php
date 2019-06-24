@@ -5,6 +5,9 @@
 	  <title>Project Manajemen MARKETPLACE</title>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" type="text/css" href="css/flickity.css">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
@@ -22,7 +25,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <form class="form-inline my-2 my-lg-0" action="index.php" method="GET">
-            <input class="form-control mr-sm-1" type="search" name="search" placeholder="Store or Product Search" aria-label="Search" style="width:750px;">
+            <input class="form-control mr-sm-1" type="search" name="search" placeholder="Store or Product Search" aria-label="Search" style="width:750px;" required />
             <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
             <a class="nav-link js-scroll-trigger btn-outline-warning" href="login.php" target="_blank">
               <i class="fa fa-sign-in"></i>
@@ -31,16 +34,9 @@
         </div>
       </div>
     </nav>
-
-    <header class="text-white"style="background:#E8A735">
+    <header>
       <div class="container text-center">
-        <h1>&nbsp;</h1>
-        <p class="lead">&nbsp;</p>
-      </div>
-    </header>
-
-    <div class="container">
-      <div class="row">
+        <h2 class="text-white">Welcome to Project Manajemen MARKETPLACE</h2>
         <?php
           if (isset($_GET['search'])) {
             include './config/search.php';
@@ -49,8 +45,7 @@
           }
         ?>
       </div>
-    </div>
-
+    </header>
 
     <!-- Footer -->
     <footer class="py-2" style="background:#8C0004">
@@ -69,5 +64,6 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>

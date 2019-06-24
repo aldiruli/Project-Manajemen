@@ -17,22 +17,57 @@
       }
     </style>
   </head>
-  <body>
-    <div class="container">
-      <div class="row">
+  <body><tt>
         <?php
         require './config/connection.php';
         function rupiah($angka){
           $hasil_rupiah = "Rp. " . number_format($angka,0,',','.');
           return $hasil_rupiah;
         }
-        $selectproduct = mysqli_query($connection, "SELECT * FROM product ORDER BY 1 DESC");
+
+        $selectuncategorized = mysqli_query($connection, "SELECT*FROM product WHERE product_category = 'UNCATEGORIZED' ORDER BY RAND()");
+        if ($selectuncategorized) {
+        ?>
+        <section id="about">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h2>Uncategorized</h2>
+                <hr>
+                <div class="main-carousel" data-flickity='{ "wrapAround": true, "imagesLoaded": true, "percentPosition": false }'>
+                  <?php
+                    while ($rowunc = mysqli_fetch_assoc($selectuncategorized)) {
+                  ?>
+                  <div class="carousel">
+                    <img src="./img/product/<?php echo $rowunc['product_image']?>" alt="<?php echo $rowunc['product_image']?>">
+                    <div class="carousel-caption">
+                      <h6><kbd><?php echo $rowunc['product_name']?></kbd></h6>
+                      <p>
+                        <button type="button" class="btn text-white" data-toggle="modal" data-target="#<?php echo $rowunc['id_product'] ?>" style="background:#C8000A">Details</button>
+                      </p>
+                    </div>
+                  </div>
+                  <?php
+                    }
+                  ?>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <?php
+        }
+        ?>
+        <div class="container">
+          <div class="row">
+        <?php
+        $selectproduct = mysqli_query($connection, "SELECT * FROM product ORDER BY RAND()");
         if ($selectproduct) {
           while ($row = mysqli_fetch_assoc($selectproduct)) {
         ?>
           <div class="col-sm-4">
             <div class="thumbnail">&nbsp;
-              <img src="./img/product/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_image'] ?>" style='width:50%;border-radius:10px;' draggable="false">
+              <img class="img-fluid" src="./img/product/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_image'] ?>" style='border-radius:10px;' draggable="false">
               <div class="caption"><br/>
                 <h4><?php echo $row['product_name'] ?></h4>
                 <h6>QTY: <?php echo $row['product_quantity']; ?></h6>
@@ -41,6 +76,7 @@
               <br />
               <p>
                 <button type="button" class="btn text-white" data-toggle="modal" data-target="#<?php echo $row['id_product'] ?>" style="background:#C8000A">Details</button>
+              </p>
                 <br />
             <!-- Modal -->
             <div class="modal fade" id="<?php echo $row['id_product'] ?>" role="dialog">
@@ -96,8 +132,8 @@
         }
         mysqli_close($connection);
          ?>
+       </div>
       </div>
-    </div>
     <!-- Bootstrap core JavaScript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

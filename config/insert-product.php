@@ -15,6 +15,7 @@ require_once './connection.php';
   $pq = $_POST['product-quantity'];
   $pp = $_POST['product-price'];
   $pd = $_POST['product-description'];
+  $pg = $_POST['product-category'];
   $ps = $_POST['product-seller'];
   $pi  = $_FILES['product-image']['name'];
   $target_dir = "../img/product/";
@@ -43,7 +44,7 @@ require_once './connection.php';
       echo '<tt>'."Sorry, ur file was not uploaded.";
       header("refresh:1.5 ; ../seller");
     }else{
-      $inpro = mysqli_query($connection, "INSERT INTO product (product_name, product_quantity, product_price, product_description, product_image, product_seller, product_uptime) VALUES ('$pn','$pq','$pp','$pd','$pi','$ps',now())");
+      $inpro = mysqli_query($connection, "INSERT INTO product (product_name, product_quantity, product_price, product_description, product_image, product_category, product_seller, product_uptime) VALUES ('$pn','$pq','$pp','$pd','$pi','$pg','$ps',now())");
       mysqli_close($connection);
       if ($inpro && move_uploaded_file($_FILES["product-image"]["tmp_name"], $target_file)) {
           echo '<tt>'."Data has been uploaded.";
