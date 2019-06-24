@@ -4,9 +4,6 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
     <title></title>
     <link rel='stylesheet' href="../font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <style media="screen">
       .thumbnail img{
         width: 180px;
@@ -36,13 +33,14 @@
           <div class="col-sm-4">
             <div class="thumbnail">&nbsp;
               <img src="./img/product/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_image'] ?>" style='width:50%;border-radius:10px;' draggable="false">
-              <div class="caption">
-                <h3><?php echo $row['product_name'] ?></h3>
+              <div class="caption"><br/>
+                <h4><?php echo $row['product_name'] ?></h4>
                 <h6>QTY: <?php echo $row['product_quantity']; ?></h6>
                 IDR: <?php echo rupiah($row['product_price']) ?>
               </div>
+              <br />
               <p>
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#<?php echo $row['id_product'] ?>">Details</button>
+                <button type="button" class="btn text-white" data-toggle="modal" data-target="#<?php echo $row['id_product'] ?>" style="background:#C8000A">Details</button>
                 <br />
             <!-- Modal -->
             <div class="modal fade" id="<?php echo $row['id_product'] ?>" role="dialog">
@@ -100,5 +98,14 @@
          ?>
       </div>
     </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
   </body>
 </html>

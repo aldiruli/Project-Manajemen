@@ -35,13 +35,13 @@ require_once './connection.php';
     //allow certain file formats
     if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
       echo '<tt>'."Sorry, only: JPG, PNG, JPEG, and GIF files are allowed.";
-      header("refresh:1.5 ; ../form-product.php");
+      header("refresh:1.5 ; ../seller");
       $uploadOK = 0;
     }
     //check if $uploadOK is set to 0 by an error
     if ($uploadOK == 0) {
       echo '<tt>'."Sorry, ur file was not uploaded.";
-      header("refresh:1.5 ; ../form-product.php");
+      header("refresh:1.5 ; ../seller");
     }else{
       $inpro = mysqli_query($connection, "INSERT INTO product (product_name, product_quantity, product_price, product_description, product_image, product_seller, product_uptime) VALUES ('$pn','$pq','$pp','$pd','$pi','$ps',now())");
       mysqli_close($connection);
