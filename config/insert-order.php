@@ -126,10 +126,10 @@
             </div>
           </div>
         <?php
+        mysqli_close($connection);
         }else {
           echo "errno";
         }
-
       }else {
         echo "bloq";
       }

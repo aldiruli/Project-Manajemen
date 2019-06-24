@@ -128,7 +128,7 @@
       }else {
         echo "bloq";
       }
-      mysqli_close($connection);
+
      ?>
      <br />
      <hr width="70%">
