@@ -59,7 +59,17 @@
           <td>Seller</td>
           <td>:</td>
           <td>
-            <input class="hmm" type="text" name="product-seller" value="<?php echo $_SESSION['username'];?>" readonly />
+            <?php
+              require '../config/connection.php';
+              $selectstore = mysqli_query($connection, "SELECT user_shopname FROM user WHERE (`user_username` LIKE '%".$_SESSION['username']."%')");
+              if ($selectstore) {
+                while ($row = mysqli_fetch_assoc($selectstore)) {
+              ?>
+                <input class="hmm" type="text" name="product-seller" value="<?php echo $row['user_shopname'];?>" readonly />
+              <?php
+                }
+              }
+             ?>
           </td>
         </tr>
         <tr>

@@ -62,6 +62,9 @@
                 <li class="nav-item col-sm-2">
                   <a class="nav-link active" data-toggle="tab" href="#select-product">Product</a>
                 </li>
+                <li class="nav-item col-sm-2">
+                  <a class="nav-link" data-toggle="tab" href="#incoming-order">Incoming Order</a>
+                </li>
               </ul>
           </center><br />
           <div class="row">
@@ -69,6 +72,10 @@
               <div id="select-product" class="container tab-pane active">
                 <h3>Product Data</h3>
                 <?php include '../config/my-product.php'; ?>
+              </div>
+              <div id="incoming-order" class="container tab-pane">
+                <h3>Incoming Order</h3>
+                <?php include '../config/incoming-order.php'; ?>
               </div>
             </div>
           </div>

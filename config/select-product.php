@@ -21,12 +21,6 @@
     </style>
   </head>
   <body>
-    <?php
-    function rupiah($angka){
-      $hasil_rupiah = "Rp. " . number_format($angka,0,',','.');
-      return $hasil_rupiah;
-    }
-    ?>
     <div class="container">
       <div class="row">
         <?php
@@ -57,7 +51,7 @@
                   </div>
                   <div class="modal-body">
                     <h4><?php echo $row['product_name']; ?></h4>
-                    <img src="./img/product/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_image'] ?>" style='width:50%;border-radius:10;' draggable="false">
+                    <img src="./img/product/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_image'] ?>" style='width:50%;height:50%;border-radius:10;' draggable="false">
                     <p>Description: <br /> <?php echo $row['product_description']; ?></p>
                     <br />
                     <p>
@@ -70,7 +64,17 @@
                       <?php echo rupiah($row['product_price']) ?>
                     </p>
                     <p>
-                      Tanya Kami : <a href="https://api.whatsapp.com/send?phone=xxxx" class="fa fa-whatsapp fa-2x" target="_blank" style="text-align:center"></a>
+                      <?php
+                      $selectuser = mysqli_query($connection, "SELECT * FROM user ORDER BY 1 DESC");
+                      if ($selectuser) {
+                        $rowb = mysqli_fetch_assoc($selectuser)
+                      ?>
+                      Ask Us: <a href="https://wa.me/<?php echo $rowb['user_phone']?>?text=Hi%20<?php echo $row['product_seller']?>,%20<?php echo $row['product_name']?>%20still%20available?" class="fa fa-whatsapp fa-2x" target="_blank" style="text-align:center"></a>
+                      <?php
+                      }else {
+                        echo "string";
+                      }
+                      ?>
                     </p>
                   </div>
                   <div class="modal-footer">
@@ -87,7 +91,7 @@
         <?php
           }
         }else {
-          echo "string";
+          echo '&laquo'."NO PRODUCT".'&raquo';
         }
         mysqli_close($connection);
          ?>

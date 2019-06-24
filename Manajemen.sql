@@ -45,6 +45,41 @@ LOCK TABLES `product` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `request`
+--
+
+DROP TABLE IF EXISTS `request`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `request` (
+  `request_id` int(16) NOT NULL AUTO_INCREMENT,
+  `request_productname` varchar(255) DEFAULT NULL,
+  `request_quantity` varchar(255) DEFAULT NULL,
+  `request_totalprice` varchar(255) DEFAULT NULL,
+  `request_buyername` varchar(255) DEFAULT NULL,
+  `request_buyerphone` varchar(255) DEFAULT NULL,
+  `request_buyeraddress` varchar(255) DEFAULT NULL,
+  `request_buyersubdis` varchar(255) DEFAULT NULL,
+  `request_buyercity` varchar(255) DEFAULT NULL,
+  `request_buyerprovince` varchar(255) DEFAULT NULL,
+  `request_buyercountry` varchar(255) DEFAULT NULL,
+  `request_buyerpostalcode` varchar(255) DEFAULT NULL,
+  `request_time` datetime DEFAULT NULL,
+  `product_seller` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`request_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `request`
+--
+
+LOCK TABLES `request` WRITE;
+/*!40000 ALTER TABLE `request` DISABLE KEYS */;
+/*!40000 ALTER TABLE `request` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -57,6 +92,9 @@ CREATE TABLE `user` (
   `user_username` varchar(255) DEFAULT NULL,
   `user_pwd` varchar(255) DEFAULT NULL,
   `user_phone` varchar(255) DEFAULT NULL,
+  `user_shopname` varchar(255) DEFAULT NULL,
+  `user_bank` varchar(255) DEFAULT NULL,
+  `user_accountbank` varchar(255) DEFAULT NULL,
   `user_uptime` datetime DEFAULT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -80,4 +118,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-27 14:56:36
+-- Dump completed on 2019-06-19 22:38:51
