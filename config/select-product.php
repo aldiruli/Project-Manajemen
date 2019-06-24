@@ -25,7 +25,10 @@
       <div class="row">
         <?php
         require './config/connection.php';
-
+        function rupiah($angka){
+          $hasil_rupiah = "Rp. " . number_format($angka,0,',','.');
+          return $hasil_rupiah;
+        }
         $selectproduct = mysqli_query($connection, "SELECT * FROM product ORDER BY 1 DESC");
         if ($selectproduct) {
           while ($row = mysqli_fetch_assoc($selectproduct)) {
