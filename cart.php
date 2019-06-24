@@ -132,7 +132,7 @@
                 <td></td>
                 <td>
                   <input class="btn btn-success" type="submit" name="submit" value="CHECKOUT">
-                  <a href="../Project-Manajemen" class="btn btn-danger">BACK</a>
+                  <a href="http://sakuntasarpa.web.id/" class="btn btn-danger">BACK</a>
                 </td>
               </tr>
             </table>

@@ -67,6 +67,12 @@
                  <td colspan="3">&nbsp;</td>
                </tr>
                <tr>
+                 <td colspan="3" style="font-size:10px" align="center">**Note: ur information is safe.**</td>
+               </tr>
+               <tr>
+                 <td colspan="3">&nbsp;</td>
+               </tr>
+               <tr>
                  <td></td>
                  <td></td>
                  <td align="right">

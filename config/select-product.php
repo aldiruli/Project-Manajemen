@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" oncontextmenu="return false">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
     <title></title>
     <link rel='stylesheet' href="../font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
